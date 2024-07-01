@@ -4,8 +4,8 @@ WORKDIR /drwafazaiem-backend-app-aymen
 
 ## vous devez ici placer le nom de votre dossier backend
 
-COPY package.json ./
-COPY package-lock.json ./
+COPY /drwafazaiem-backend-app-aymen/package.json ./
+COPY drwafazaiem-backend-app-aymen/package-lock.json ./
 #RUN npm install -g npm@10.8.1
 
 RUN npm install -f
