@@ -6,6 +6,7 @@
   "scripts": {
     "server": "node App.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "npm publish --registry http://localhost:8081/repository/npm-releases/"
   },
   "keywords": [],
   "author": "",
