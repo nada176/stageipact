@@ -1,16 +1,19 @@
 FROM node:20.5.0  
 
+# Set the working directory inside the container
 WORKDIR /drwafazaiem-backend-app-aymen
-## vous devez ici placer le nom de votre dossier backend
 
+# Copy package.json and package-lock.json into the working directory
 COPY package*.json ./
 
-#RUN npm install -g npm@10.8.1
-
+# Install npm dependencies
 RUN npm install -f
 
+# Copy the rest of the application code to the working directory
 COPY . .
 
+# Expose the port your application will run on
 EXPOSE 6668
 
-CMD ["node","server.js"]
+# Command to run your application
+CMD ["node", "server.js"]
