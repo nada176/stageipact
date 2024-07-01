@@ -1,24 +1,16 @@
-# Base image
-FROM node:16.20.0
+FROM node:20.5.0  
 
-# Set the working directory inside the container
-WORKDIR /drwafazaiem-backend-app-aymen
+WORKDIR /rwafazaiem-backend-app-aymen
+## vous devez ici placer le nom de votre dossier backend
 
-# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install --legacy-peer-deps
+#RUN npm install -g npm@10.8.1
 
-# Install webpack globally
-RUN npm install -g webpack
+RUN npm install -f
 
-# Copy the source code to the working directory
 COPY . .
 
+EXPOSE 6668
 
-# Expose any necessary ports (if applicable)
-EXPOSE 3444
-
- # Default command to run the application (if applicable)
-CMD [ "npm","start" ]
+CMD ["node","server.js"]
