@@ -1,6 +1,6 @@
 FROM node:20.5.0  
 
-WORKDIR /rwafazaiem-backend-app-aymen
+WORKDIR /drwafazaiem-backend-app-aymen
 ## vous devez ici placer le nom de votre dossier backend
 
 COPY package*.json ./
