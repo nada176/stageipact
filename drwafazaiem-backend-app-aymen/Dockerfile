@@ -2,16 +2,16 @@ FROM node:20.5.0
 
 WORKDIR /drwafazaiem-backend-app-aymen
 
-## vous devez ici placer le nom de votre dossier backend
-
-COPY /drwafazaiem-backend-app-aymen/package.json ./
+# Copier package.json et package-lock.json dans le répertoire de travail
+COPY drwafazaiem-backend-app-aymen/package.json ./
 COPY drwafazaiem-backend-app-aymen/package-lock.json ./
-#RUN npm install -g npm@10.8.1
 
+# Installer les dépendances
 RUN npm install -f
 
-COPY . .
+# Copier le reste de l'application
+COPY drwafazaiem-backend-app-aymen/ .
 
 EXPOSE 6668
 
-CMD ["node","server.js"]
+CMD ["node", "server.js"]
