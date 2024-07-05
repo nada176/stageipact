@@ -14,4 +14,4 @@ COPY drwafazaiem-backend-app-aymen/ .
 
 EXPOSE 6668
 
-CMD ["node", "server.js"]
+CMD ["node", "App.js"]
