@@ -5,7 +5,8 @@ FROM node:20.5.0-alpine
 WORKDIR /drwafazaiem-front-web-client-main
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY drwafazaiem-front-web-client-main/package.json ./
+COPY drwafazaiem-front-web-client-main/package-lock.json ./
 
 # Install dependencies
 RUN npm install --legacy-peer-deps
