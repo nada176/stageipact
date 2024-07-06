@@ -2,7 +2,7 @@
 FROM node:20.5.0-alpine
 
 # Set the working directory inside the container
-WORKDIR /App
+WORKDIR /drwafazaiem-front-web-client-main
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
