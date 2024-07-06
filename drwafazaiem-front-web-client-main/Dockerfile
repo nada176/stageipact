@@ -8,13 +8,12 @@ WORKDIR /App
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --legacy-peer-deps
-
+RUN npm install -f
 # Install webpack globally
 RUN npm install -g webpack
 
 # Copy the source code to the working directory
-COPY . .
+COPY drwafazaiem-front-web-client-main/ .
 
 
 # Expose any necessary ports (if applicable)
