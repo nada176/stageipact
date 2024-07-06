@@ -8,9 +8,11 @@ WORKDIR /App
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install -f
+RUN npm install --legacy-peer-deps
+
 # Install webpack globally
-RUN npm install -g webpack
+RUN npm install -g webpac
+
 
 # Copy the source code to the working directory
 COPY drwafazaiem-front-web-client-main/ .
