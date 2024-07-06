@@ -3,8 +3,8 @@ FROM node:20.5.0
 WORKDIR /drwafazaiem-backend-app-aymen
 
 # Copier package.json et package-lock.json dans le répertoire de travail
-COPY package.json ./
-COPY package-lock.json ./
+COPY drwafazaiem-backend-app-aymen/package.json ./
+COPY drwafazaiem-backend-app-aymen/package-lock.json ./
 
 # Installer les dépendances
 RUN npm install -f
