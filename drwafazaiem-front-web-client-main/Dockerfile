@@ -11,16 +11,13 @@ COPY package*.json ./
 RUN npm install --legacy-peer-deps
 
 # Install webpack globally
-RUN npm install -g webpac
-
+RUN npm install -g webpack
 
 # Copy the source code to the working directory
 COPY drwafazaiem-front-web-client-main/ .
 
-
 # Expose any necessary ports (if applicable)
 EXPOSE 5555
 
- # Default command to run the application (if applicable)
-CMD [ "npm","start" ]
-
+# Default command to run the application (if applicable)
+CMD [ "npm", "start" ]
